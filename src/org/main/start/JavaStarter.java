@@ -8,7 +8,7 @@ public class JavaStarter {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Childern p=(Childern) new Parent();
+		Parent p= new Childern();
 		p.print();
 	}
 

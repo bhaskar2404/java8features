@@ -49,15 +49,15 @@ public class java8Main {
 		studentList.add(new Student("Aravala", "Chandra", 40, "Male"));
 		studentList.add(new Student("Vanam", "Josritha", 30, "female"));
 		studentList.add(new Student("Pamidi", "geetha", 35, "female"));
-		studentList.add(new Student("Vanam", "Sahithi", 20, "Female"));
+		studentList.add(new Student("Vanam", "Sahithi", 20, "female"));
 		
 		studentList.stream().filter(x1->x1.getAge()>30).forEach(System.out::println);
 	//	studentList.stream().filter(s->s.getFirstName().endsWith("Aravala"))
 		
 	List<Student>	sorted=studentList.stream().sorted((s1,s2)->s.getAge()-s2.getAge()).collect(Collectors.toList());
 	
-		
 	
+	System.out.println(studentList.stream().collect(Collectors.groupingBy(Student::getGender,Collectors.counting())));
 		
 	}
 	
